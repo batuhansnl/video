@@ -438,6 +438,138 @@
       line-height: 1.4;
     }
 
+    .php-title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 64px;
+      letter-spacing: 2px;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .php-lead {
+      font-size: 18px;
+      color: #CBD5E1;
+      line-height: 1.5;
+      margin-bottom: 18px;
+      max-width: 640px;
+    }
+    .version-row, .svc-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+    .ver, .svc {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.15);
+      color: #94A3B8;
+      background: rgba(255,255,255,0.04);
+    }
+    .ver.ok, .svc.back {
+      color: #3DF5A0;
+      border-color: #3DF5A0;
+      background: rgba(61, 245, 160, 0.12);
+    }
+    .ver.bad, .svc.down {
+      color: #FF3B5C;
+      border-color: #FF3B5C;
+      background: rgba(255, 59, 92, 0.12);
+    }
+    .ring-wrap {
+      position: relative;
+      width: 280px;
+      height: 280px;
+      margin: 0 auto;
+    }
+    .ring-svg { width: 280px; height: 280px; }
+    .ring-bg { fill: none; stroke: rgba(255,255,255,0.08); stroke-width: 14; }
+    .ring-fg {
+      fill: none;
+      stroke: #FF3B5C;
+      stroke-width: 14;
+      stroke-linecap: round;
+      transform: rotate(-90deg);
+      transform-origin: 100px 100px;
+      stroke-dasharray: 490;
+      stroke-dashoffset: 490;
+    }
+    .ring-label {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+    .ring-label div:first-child {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 54px;
+      color: #fff;
+    }
+    .ring-sub {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: #94A3B8;
+    }
+    .scanline-box {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 18px;
+      height: 6px;
+      background: rgba(255,255,255,0.08);
+      overflow: hidden;
+      border-radius: 4px;
+    }
+    #phpScan {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 35%;
+      background: #38E1FF;
+    }
+    .chain-row { display: flex; gap: 8px; margin-top: 16px; }
+    .chain-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,59,92,0.4);
+      background: transparent;
+    }
+    .chain-dot.on {
+      background: #FF3B5C;
+      box-shadow: 0 0 12px #FF3B5C;
+    }
+    .orb {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(56, 225, 255, 0.7);
+      z-index: 4;
+      pointer-events: none;
+    }
+    .eq {
+      display: flex;
+      align-items: flex-end;
+      gap: 6px;
+      height: 90px;
+      margin-top: 16px;
+    }
+    .eq i {
+      display: block;
+      width: 10px;
+      background: #38E1FF;
+      border-radius: 3px 3px 0 0;
+    }
+
     /* Glitch and Shake classes */
     .shake {
       animation: shake-anim 0.3s ease-in-out;
@@ -454,7 +586,10 @@
 </head>
 <body>
   <div id="viewport">
-    <div class="cyber-grid"></div>
+    <div class="cyber-grid" id="cyberGrid"></div>
+    <div class="orb" id="orbA"></div>
+    <div class="orb" id="orbB" style="background:#FF3B5C;"></div>
+    <div class="orb" id="orbC"></div>
     <div class="scanlines"></div>
     <div class="vignette"></div>
 
@@ -478,7 +613,7 @@
       <!-- SAHNE 1: KANCA & STATS -->
       <div id="scene1" class="scene">
         <div class="hero-title">2026 SİBER RAPORU</div>
-        <div class="hero-subtitle">Banka Üst Yönetimi & Yönetim Kurulu İçin Stratejik Tehdit Brifingi</div>
+        <div class="hero-subtitle" id="heroSub">2026'nın iki büyük kırılması</div>
         <div class="stats-row">
           <div class="stat-box">
             <div class="stat-number" id="statCyberCost">$0</div>
@@ -506,9 +641,10 @@
           <div class="grid-2col">
             <div>
               <h2 style="font-size: 38px; color: #FFF; margin-bottom: 16px; font-weight: 800;">Binance Hot Wallet Sızıntısı</h2>
-              <div style="font-family: 'JetBrains Mono'; font-size: 48px; color: #FF3B5C; font-weight: 800; margin-bottom: 20px;">
-                $6.340.000.000
+              <div id="binanceAmount" style="font-family: 'JetBrains Mono'; font-size: 48px; color: #FF3B5C; font-weight: 800; margin-bottom: 8px;">
+                $0
               </div>
+              <div class="chain-row" id="chainRow"></div>
               <p style="font-size: 18px; color: #CBD5E1; line-height: 1.6; margin-bottom: 16px;">
                 Kuzey Kore bağlantılı <b>TraderTraitor</b> grubu, sistem zafiyetleri yerine doğrudan DevOps mühendislerini hedef alarak yetkili anahtarları çaldı.
               </p>
@@ -524,12 +660,53 @@
         </div>
       </div>
 
-      <!-- SAHNE 3: FRANSA BUZDOLABI SABOTAJI -->
+      <!-- SAHNE 3: PHP2SHELL -->
       <div id="scene3" class="scene">
+        <div class="cyber-card">
+          <div class="card-top-line" style="background: linear-gradient(90deg, transparent, #FF3B5C, transparent);"></div>
+          <div class="card-header">
+            <div class="card-tag">OLAY 02 // PHP2SHELL</div>
+            <div class="status-pill status-confirmed">21 EKİM 2026 • KÜRESEL</div>
+          </div>
+          <div class="grid-2col">
+            <div>
+              <h2 class="php-title" id="phpTitle">PHP2SHELL</h2>
+              <p class="php-lead">İnternetteki sitelerin yaklaşık yüzde yetmişini çalıştıran PHP'de, kimlik doğrulamasız uzaktan kod çalıştırma. Yamalar 8.2 ve üzeri için çıktı. Eski sürümlerin çoğu açık kaldı.</p>
+              <div class="version-row" id="versionRow">
+                <span class="ver" data-fix="1">8.5</span>
+                <span class="ver" data-fix="1">8.4</span>
+                <span class="ver" data-fix="1">8.3</span>
+                <span class="ver" data-fix="1">8.2</span>
+                <span class="ver" data-fix="0">8.1</span>
+                <span class="ver" data-fix="0">7.4</span>
+              </div>
+              <div class="svc-row" id="svcRow">
+                <div class="svc">BANKACILIK</div>
+                <div class="svc">HAVAYOLU</div>
+                <div class="svc">KAMU</div>
+              </div>
+            </div>
+            <div class="ring-wrap">
+              <svg class="ring-svg" viewBox="0 0 200 200">
+                <circle class="ring-bg" cx="100" cy="100" r="78"></circle>
+                <circle id="phpRing" class="ring-fg" cx="100" cy="100" r="78"></circle>
+              </svg>
+              <div class="ring-label">
+                <div id="phpPct">0%</div>
+                <div class="ring-sub">WEB'DE PHP</div>
+              </div>
+              <div class="scanline-box"><div id="phpScan"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SAHNE 4: FRANSA BUZDOLABI SABOTAJI -->
+      <div id="scene4" class="scene">
         <div class="cyber-card">
           <div class="card-top-line" style="background: linear-gradient(90deg, transparent, #FFB547, transparent);"></div>
           <div class="card-header">
-            <div class="card-tag">OLAY 02 // FİZİKSEL ALTYAPI & IOT SABOTAJI</div>
+            <div class="card-tag">OLAY 03 // FİZİKSEL ALTYAPI</div>
             <div class="status-pill status-warning">700+ MARKET • 11 AVRUPA ÜLKESİ</div>
           </div>
           <div class="grid-2col">
@@ -539,8 +716,8 @@
                 Saldırganlar, internete doğrudan açık bırakılan ve fabrika şifresi (admin/tarih) değiştirilmeyen endüstriyel soğutma cihazlarını hackleyerek dolapları defrost moduna aldı.
               </p>
               <div style="background: rgba(255, 181, 71, 0.1); border-left: 4px solid #FFB547; padding: 14px 18px; border-radius: 4px;">
-                <div style="font-weight: 700; color: #FFB547; margin-bottom: 4px;">BANKAMIZ İÇİN DERS:</div>
-                <div style="font-size: 14px; color: #E2E8F0;">Şube binalarımızdaki iklimlendirme (HVAC), jeneratör ve güvenlik kameraları izole edilmezse, ana bankacılık ağına sızma köprüsü olabilir.</div>
+                <div style="font-weight: 700; color: #FFB547; margin-bottom: 4px;">AYRIŞMAYAN AĞ:</div>
+                <div style="font-size: 14px; color: #E2E8F0;">İklimlendirme, jeneratör ve kameralar ayrı bir ağda değilse, kurumsal sistemlere köprü olabilir.</div>
               </div>
             </div>
             <div class="temp-gauge">
@@ -555,12 +732,12 @@
       </div>
 
       <!-- SAHNE 4: YAPAY ZEKÂ TEHDİTLERİ -->
-      <div id="scene4" class="scene">
+      <div id="scene5" class="scene">
         <div class="cyber-card">
           <div class="card-top-line" style="background: linear-gradient(90deg, transparent, #38E1FF, transparent);"></div>
           <div class="card-header">
-            <div class="card-tag">OLAY 03 // YAPAY ZEKÂ TEHDİT MATRİSİ</div>
-            <div class="status-pill status-confirmed">KRİTİK BANKACILIK RİSKİ</div>
+            <div class="card-tag">OLAY 04 // YAPAY ZEKÂ</div>
+            <div class="status-pill status-confirmed">DEEPFAKE • OTONOM AJAN</div>
           </div>
           <div class="grid-2col">
             <div>
@@ -570,8 +747,9 @@
                 • <b>Otonom Ajanlar:</b> OpenAI ve Meta ajanları güvenlik kafeslerini aşıp bağımsız sunuculara izinsiz sızdı.
               </p>
               <div style="background: rgba(56, 225, 255, 0.1); border: 1px solid rgba(56, 225, 255, 0.3); border-radius: 6px; padding: 12px 16px;">
-                <span style="color: #38E1FF; font-weight: 700;">Sesli Onay Alarmı:</span> İnsanlar deepfake sesleri ancak %55 doğrulukla (yazı-tura gibi) ayırt edebiliyor!
+                <span style="color: #38E1FF; font-weight: 700;">Ayırt etme:</span> İnsan kulağı bu sesleri yaklaşık %55 doğrulukla seçebiliyor.
               </div>
+              <div class="eq" id="eqRow"></div>
             </div>
             <div class="bar-chart">
               <div class="bar-item">
@@ -601,46 +779,40 @@
       </div>
 
       <!-- SAHNE 5: TEDARİK ZİNCİRİ & TÜRKİYE -->
-      <div id="scene5" class="scene">
+      <div id="scene6" class="scene">
         <div class="cyber-card">
           <div class="card-top-line" style="background: linear-gradient(90deg, transparent, #FFB547, transparent);"></div>
           <div class="card-header">
-            <div class="card-tag">OLAY 04 // TEDARİK ZİNCİRİ & REGÜLASYON</div>
-            <div class="status-pill status-warning">BLACK OCTOBER & 7545 SAYILI YASA</div>
+            <div class="card-tag">OLAY 05 // EKİM DALGASI</div>
+            <div class="status-pill status-warning">GÜNEY KORE • SERTİFİKA</div>
           </div>
           <div class="timeline">
             <div class="timeline-card">
-              <div class="timeline-date">EKİM 2026 // KRİPTO KRİZİ</div>
-              <div class="timeline-title">eMudhra & Java Yaması</div>
-              <div class="timeline-desc">
-                Küresel sertifika üreticisinin CA anahtarları zayıf çıktı. Oracle, CVE-2026-91403 için acil Java yaması yayımlamak zorunda kaldı.
-              </div>
+              <div class="timeline-date">EKİM 2026 // FİNANS</div>
+              <div class="timeline-title">Yirmiye yakın kuruluş</div>
+              <div class="timeline-desc">Güney Kore'de aracı kurum, borsa ve bankalar aynı dalgada hedef alındı.</div>
             </div>
             <div class="timeline-card">
-              <div class="timeline-date">EKİM 2026 // FİNANS SEKTÖRÜ</div>
-              <div class="timeline-title">Güney Kore Bankacılık Dalgası</div>
-              <div class="timeline-desc">
-                16 finans kuruluşuna eş zamanlı saldırı yapıldı; 100.000 müşterinin kişisel ve finansal hesap verisi internete sızdırıldı.
-              </div>
+              <div class="timeline-date">17 EKİM 2026</div>
+              <div class="timeline-title">38.490 kayıt</div>
+              <div class="timeline-desc">Bir aracı kurumda müşteri kimliği ve hesap bilgisi açığa çıktı. Hesap numaraları şifreliydi.</div>
             </div>
-            <div class="timeline-card" style="border-color: rgba(61, 245, 160, 0.4);">
-              <div class="timeline-date" style="color: #3DF5A0;">TÜRKİYE // YASAL ZORUNLULUK</div>
-              <div class="timeline-title">7545 Sayılı Siber Kanun</div>
-              <div class="timeline-desc">
-                Bankacılık sektörü resmî olarak "Kritik Altyapı" ilan edildi. BDDK ve TCMB zorunlu sızma denetimleri sıfır toleransla işletiliyor.
-              </div>
+            <div class="timeline-card">
+              <div class="timeline-date">AYNI HAFTALAR</div>
+              <div class="timeline-title">Sertifika ve Java</div>
+              <div class="timeline-desc">Sertifika altyapısındaki bir zayıflık, Java için acil yama gerektirdi.</div>
             </div>
           </div>
         </div>
       </div>
 
       <!-- SAHNE 6: NE YAPMALI & KAPANIŞ -->
-      <div id="scene6" class="scene">
+      <div id="scene7" class="scene">
         <div class="cyber-card">
           <div class="card-top-line" style="background: linear-gradient(90deg, transparent, #3DF5A0, transparent);"></div>
           <div class="card-header">
             <div class="card-tag">STRATEJİK YOL HARİTASI // BİLGİ GÜVENLİĞİ</div>
-            <div class="status-pill status-secure">BANKAMIZ İÇİN 4 ÖNCELİK</div>
+            <div class="status-pill status-secure">DÖRT BAŞLIK</div>
           </div>
           <div class="checklist-grid">
             <div class="check-item">
@@ -660,8 +832,8 @@
             <div class="check-item">
               <div class="check-icon">✓</div>
               <div>
-                <div class="check-title">3. Şube ve Fiziksel IoT İzolasyonu</div>
-                <div class="check-desc">Tüm şube HVAC, kamera ve jeneratör ağları kurumsal bankacılık ağından tam mikro-segmentasyonla ayrılmalı.</div>
+                <div class="check-title">3. Fiziksel cihaz ağları</div>
+                <div class="check-desc">İklimlendirme, kamera ve jeneratör ağları kurumsal sistemlerden ayrılmalı.</div>
               </div>
             </div>
             <div class="check-item">
@@ -673,7 +845,7 @@
             </div>
           </div>
           <div style="margin-top: 32px; text-align: center; font-family: 'JetBrains Mono'; font-size: 16px; color: #3DF5A0; letter-spacing: 2px; font-weight: 700;">
-            SİBER GÜVENLİK BİR MASRAF DEĞİL, KURUMSAL VAR OLUŞ MESELESİDİR.
+            SİBER GÜVENLİK BİR MASRAF DEĞİL, DİJİTAL VARLIĞIN DEVAMIDIR.
           </div>
         </div>
       </div>

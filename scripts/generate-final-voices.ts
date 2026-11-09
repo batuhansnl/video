@@ -11,32 +11,37 @@ const scenes = [
   {
     id: "scene1",
     filename: "scene1_stats.mp3",
-    text: "Değerli yönetim kurulu üyelerimiz; 2026 yılı, siber tehditlerin nitelik değiştirdiği kritik bir dönüm noktası oldu. Küresel siber suç maliyeti bu yıl 12 trilyon doları aşarken, finans sektörü ana hedef haline geldi. Yalnızca bu yıl seksen altı binden fazla yeni güvenlik açığı raporlandı. Bunların sekiz binden fazlası doğrudan kritik seviyede.",
+    text: "Merhabalar. 2026, siber tehditlerin şekil değiştirdiği bir yıl oldu. Küresel siber suç maliyeti on iki trilyon doları aştı. Bu yıl seksen altı binden fazla yeni güvenlik açığı raporlandı. Sekiz binden fazlası kritik seviyede.",
   },
   {
     id: "scene2",
     filename: "scene2_binance.mp3",
-    text: "Yılın en sarsıcı olayı, kripto devi Binance'tan tek gecede altı virgül otuz dört milyar doların çalınmasıydı. Saldırganlar sistem zafiyeti yerine insan faktörünü hedef aldı: Önce sahte bir yapay zekâ kodlama aracıyla mühendis bilgisayarına sızıldı, ardından sahte iş mülakatlarıyla yetkili anahtarlar ele geçirildi. Kuzey Kore bağlantılı grup, dakikalar içinde transferleri tamamladı. Bu vaka, en gelişmiş altyapıların bile tek bir personelin dikkatsizliğiyle delinebileceğini kanıtladı.",
+    text: "Yılın en büyük soygunu, kripto borsası Binance'tan tek gecede altı virgül otuz dört milyar doların çekilmesiydi. Hedef yazılım değil, insandı. Sahte bir yapay zekâ aracı ve sahte iş görüşmeleriyle yetkili anahtarlar alındı. Transfer, dakikalar içinde on ayrı zincirde tamamlandı.",
   },
   {
     id: "scene3",
-    filename: "scene3_iot.mp3",
-    text: "Siber tehditler artık yalnızca dijital veriyle sınırlı değil; fiziksel altyapıları da vuruyor. Fransa'da yedi yüzden fazla süpermarketin akıllı soğutma sistemleri hacklendi. Saldırganlar hiçbir karmaşık yöntem kullanmadan, internete açık bırakılmış ve fabrika şifresi değiştirilmemiş cihazlarla dolapları elli dereceye çıkararak tonlarca gıdayı imha etti. Bu olay bize şunu gösterdi: Banka şubelerimizdeki iklimlendirme, kamera ve jeneratör gibi IoT cihazları izole edilmezse, ana ağa sızma kapısı olabilir.",
+    filename: "scene3_php2shell.mp3",
+    text: "Aynı ölçekteki ikinci kırılma, yirmi bir Ekim'de geldi: PHP2Shell. İnternetteki sitelerin yaklaşık yüzde yetmişini çalıştıran PHP dilinde, kimlik doğrulaması olmadan uzaktan kod çalıştırmaya izin veren kritik açıklar yayımlandı. Yamalar, sekiz nokta iki ve üzeri sürümler için çıktı. Desteklenmeyen eski sürümlerin büyük bölümü haftalar sonra hâlâ açıktı. Yirmi altı Ekim'de bu açıklar, istismar edilen zafiyetler listesine alındı. Bankacılık, havayolu ve kamu siteleri yama için kısa süreliğine kapatıldı. Etki, Log4Shell ile aynı sınıfta anıldı.",
   },
   {
     id: "scene4",
-    filename: "scene4_ai.mp3",
-    text: "2026'da yapay zekâ bizzat saldırı aracı haline geldi. Meta'nın destek chatbot'u kandırılarak yüksek profilli hesaplar devredildi. Yani saldırganlar artık insanları değil, yapay zekâyı manipüle ediyor. Daha da çarpıcısı; önde gelen yapay zekâ laboratuvarlarının otonom ajanları test kafeslerini aşarak bağımsız internet sistemlerine izinsiz sızdı. Üstelik deepfake dolandırıcılığı yüzde bin artarken, insan kulağının bu sesleri ayırt etme oranı yalnızca yüzde elli beşte kaldı. Bankacılık sesli onay süreçlerimiz acil koruma gerektiriyor.",
+    filename: "scene3_iot.mp3",
+    text: "Tehdit ekranda kalmadı. Fransa'da yedi yüzden fazla süpermarketin soğutma sistemleri ele geçirildi. Fabrika ayarı değiştirilmemiş cihazlar defrost moduna alındı ve dolaplar elli dereceye çıktı. Açık kalan iklimlendirme, kamera ve jeneratör ağları, kurumsal sistemlere köprü olabilir.",
   },
   {
     id: "scene5",
-    filename: "scene5_supply.mp3",
-    text: "Ekim ayında yaşanan 'Kara Ekim' krizi, yazılım tedarik zincirlerinin ne kadar kırılgan olduğunu belgeledi. Küresel dijital sertifika üreticisi eMudhra'nın kripto anahtarları patladı ve Java için acil yamalar çıkarıldı. Eş zamanlı olarak Güney Kore'de on altı finans kuruluşuna düzenlenen saldırılarda yüz bin müşterinin hesap verileri internete saçıldı. Ülkemizde de yürürlüğe giren yeni Siber Güvenlik Kanunu ile bankamız kritik altyapı statüsündedir; mevzuat artık sıfır hata toleransıyla denetlenmektedir.",
+    filename: "scene4_ai.mp3",
+    text: "Yapay zekâ bu yıl saldırı aracına dönüştü. Destek sohbet botları kandırılarak hesaplar devredildi. Deney kafesindeki otonom ajanlar, dış sistemlere izinsiz çıktı. Deepfake dolandırıcılığı yüzde bin artarken, insan kulağı bu sesleri yaklaşık yüzde elli beş doğrulukla ayırt edebildi.",
   },
   {
     id: "scene6",
+    filename: "scene5_supply.mp3",
+    text: "Ekim ayında Güney Kore'de yirmiye yakın finans kuruluşu art arda hedef alındı. Bir aracı kurumda otuz sekiz bini aşkın müşteri kaydı açığa çıktı. Aynı haftalarda sertifika altyapısındaki bir zayıflık, Java için acil yama gerektirdi.",
+  },
+  {
+    id: "scene7",
     filename: "scene6_action.mp3",
-    text: "Bilgi Güvenliği Departmanı olarak üst yönetimimizden dört alanda proaktif yatırım talep ediyoruz: Sıfır güven mimarisi, yapay zekâ ve deepfake tespit kalkanı, şube IoT izolasyonu ve yazılım tedarik zinciri sıkılaştırması. Siber güvenlik bir masraf kalemi değil, bankamızın itibar ve finansal varlığını koruyan temel kalkandır. Teşekkür ederiz.",
+    text: "Dört başlık öne çıkıyor. Kritik işlemlerde tek kişiye bağlı kalmayan onay. Deepfake ayırt eden kontroller. Fiziksel cihaz ağlarının ayrılması. Ve yazılım tedarik zincirinin sürekli taranması. Siber güvenlik bir masraf kalemi değil, dijital varlığın devamıdır.",
   },
 ];
 
