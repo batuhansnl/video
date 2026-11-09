@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+DIR="/Users/batuhansenel/2026 siber olaylar/node_modules/@remotion/compositor-darwin-arm64"
+export DYLD_LIBRARY_PATH="$DIR:$DYLD_LIBRARY_PATH"
+exec "$DIR/ffmpeg" "$@"
