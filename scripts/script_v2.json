@@ -1,0 +1,34 @@
+[
+  {
+    "id": "s1_intro",
+    "text": "[serious] 2026'da saldırganlar kapıyı kırmadı. [pause] Anahtarla girdi. Çalınan kimlikler, yapay zekâ ve güvenilen tedarikçiler... İşte yılın öne çıkan olayları ve bize bıraktığı dersler."
+  },
+  {
+    "id": "s2_binance",
+    "text": "[dramatic] Yirmi dokuz Ekim gecesi, Binance'tan altı virgül üç milyar dolar çekildi. Kripto tarihinin en büyük soygunu! [pause] Peki nasıl? Bir mühendisin bilgisayarı ele geçirildi, imza anahtarlarına ulaşıldı ve para dakikalar içinde on ayrı blokzincire dağıtıldı. FBI, saldırıyı Kuzey Kore bağlantılı TraderTraitor grubuna bağladı."
+  },
+  {
+    "id": "s3_php",
+    "text": "[urgent] Aynı ay ikinci kırılma geldi: PHP2Shell. Web'in büyük bölümünü çalıştıran PHP'de, şifre bile gerekmeden uzaktan kod çalıştırmaya izin veren iki kritik açık. Yamalar yirmi bir Ekim'de çıktı. Beş gün sonra ABD'nin siber güvenlik ajansı CISA, açıkların saldırılarda aktif olarak kullanıldığını doğruladı."
+  },
+  {
+    "id": "s4_connectwise",
+    "text": "[serious] Ekim ortasında ise tek bir anahtar yüzlerce kapıyı açtı. ConnectWise'ın bulut yedekleme uygulamasına ait bir Microsoft 365 anahtarı çalındı ve saldırganlar yüz altmışı aşkın şirketin ortamına girdi. [pause] Erişim bir kişiye değil, uygulamaya ait olduğu için... çok faktörlü doğrulama hiç devreye girmedi."
+  },
+  {
+    "id": "s5_stryker",
+    "text": "Mart ayında hedef, tıbbi teknoloji devi Stryker'dı. İran bağlantılı Handala grubu, şirketin Microsoft ortamındaki cihazları uzaktan sildi. Sipariş, üretim ve sevkiyat durdu. [pause] Fidye istenmedi. Amaç... yalnızca zarar vermekti."
+  },
+  {
+    "id": "s6_outlook",
+    "text": "[thoughtful] Peki bu olayların ortak noktası ne? 2026 tehdit raporları altı başlıkta birleşiyor. [pause] Bir: kimlik. Saldırganlar artık sızmıyor, oturum açıyor. Bilgi çalan zararlılar ve MFA atlatma, en yaygın giriş yolu. İki: yapay zekâ destekli dolandırıcılık. Kusursuz Türkçeyle yazılmış oltalama e-postaları, klonlanmış yönetici sesleri. CrowdStrike'a göre yapay zekâ kullanan grupların faaliyeti yüzde seksen dokuz arttı. 2024'teki Arup vakasında, deepfake bir görüntülü toplantıdaki sahte yöneticiler yirmi beş milyon dolar transfer ettirdi. Üç: fidye yazılımı. Artık sadece şifrelemiyor, veriyi çalıp şantaj yapıyor. Dört: tedarik zinciri. Marks and Spencer'da üçüncü taraf üzerinden gelen saldırının faturası yaklaşık üç yüz milyon sterlin. Beş: devlet destekli gruplar. Altı: yanlış yapılandırılmış bulut. [pause] Ve hız arttı: Saldırganın ağda yayılması ortalama yirmi dokuz dakika. En hızlısı... yirmi yedi saniye."
+  },
+  {
+    "id": "s7_turkiye",
+    "text": "[serious] Türkiye de bu tablonun dışında değil. Şubat'ta Civil Mağazacılık'ta yaklaşık dört buçuk milyon kişinin verisi ele geçirildi. Aynı ay Türkkep'te kullanıcıların kimlik ve iletişim bilgilerine yetkisiz erişildi. Onbir Grup'ta ise saldırganlar sistemde beş ay fark edilmeden kaldı ve sonunda verileri sildi. Eylül'de de Eve Kozmetik'te altı milyonu aşkın müşteri etkilendi. [pause] Ortak sorun aynı: zayıf erişim kontrolü ve geç tespit."
+  },
+  {
+    "id": "s8_outro",
+    "text": "[confident] Peki ne yapmalı? Kimlikleri oltalamaya dayanıklı MFA ile koruyun. Kritik transferleri ikinci bir kanaldan doğrulayın. Tedarikçi ve uygulama erişimlerini düzenli denetleyin. Ve tespit süresini dakikalara indirin. [pause] Çünkü 2026 bize şunu gösterdi: Siber güvenlik bir masraf değil... işin devamlılığıdır."
+  }
+]

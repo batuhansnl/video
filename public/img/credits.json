@@ -1,0 +1,93 @@
+{
+ "binance_logo": {
+  "file": "binance_logo.png",
+  "title": "File:Binance Logo.png",
+  "artist": "Unknown authorUnknown author",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File%3ABinance_Logo.png"
+ },
+ "fbi_parkjinhyok": {
+  "file": "fbi_parkjinhyok.png",
+  "title": "File:Cartel de la orden de captura de Park Jin Hyok.png",
+  "artist": "FBI",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File%3ACartel_de_la_orden_de_captura_de_Park_Jin_Hyok.png"
+ },
+ "php_logo": {
+  "file": "php_logo.png",
+  "title": "File:PHP-logo.svg",
+  "artist": "Colin Viebrock",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File%3APHP-logo.svg"
+ },
+ "php_code": {
+  "file": "php_code.jpg",
+  "title": "File:Codigo php.jpg",
+  "artist": "lmonk72",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File%3ACodigo_php.jpg"
+ },
+ "cisa_seal": {
+  "file": "cisa_seal.png",
+  "title": "File:Seal of Cybersecurity and Infrastructure Security Agency.svg",
+  "artist": "Cybersecurity and Infrastructure Security Agency",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File%3ASeal_of_Cybersecurity_and_Infrastructure_Security_Agency.svg"
+ },
+ "connectwise_logo": {
+  "file": "connectwise_logo.png",
+  "title": "File:Connectwise-Logo.png",
+  "artist": "ConnectWise",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File%3AConnectwise-Logo.png"
+ },
+ "stryker_logo": {
+  "file": "stryker_logo.png",
+  "title": "File:Stryker Corporation logo.svg",
+  "artist": "Unknown authorUnknown author",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File%3AStryker_Corporation_logo.svg"
+ },
+ "stryker_hq": {
+  "file": "stryker_hq.jpg",
+  "title": "File:Stryker-headquarters (2).jpg",
+  "artist": "Vraal48",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File%3AStryker-headquarters_%282%29.jpg"
+ },
+ "datacenter": {
+  "file": "datacenter.jpg",
+  "title": "File:BalticServers data center.jpg",
+  "artist": "BalticServers.com",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File%3ABalticServers_data_center.jpg"
+ },
+ "deepfake_ted": {
+  "file": "deepfake_ted.jpg",
+  "title": "File:DigiDoug DeepFake at TED2019.jpg",
+  "artist": "Steve Jurvetson",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File%3ADigiDoug_DeepFake_at_TED2019.jpg"
+ },
+ "ms_store": {
+  "file": "ms_store.jpg",
+  "title": "File:St Pancras International Marks & Spencer.jpg",
+  "artist": "Sunil060902 at English Wikipedia",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File%3ASt_Pancras_International_Marks_%26_Spencer.jpg"
+ },
+ "kvkk_logo": {
+  "file": "kvkk_logo.png",
+  "title": "File:KVKK logo.svg",
+  "artist": "Kişisel Verileri Koruma Kurumu",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File%3AKVKK_logo.svg"
+ },
+ "avm": {
+  "file": "avm.jpg",
+  "title": "File:Capitol AVM.jpg",
+  "artist": "The original uploader was Yalhi at Turkish Wikipedia.",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File%3ACapitol_AVM.jpg"
+ }
+}

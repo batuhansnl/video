@@ -7,10 +7,21 @@ import { SiberOlaylar2026 } from "./CyberSecurity/SiberOlaylar2026";
 import { IntroScene } from "./CyberSecurity/IntroScene";
 import { OutroScene } from "./CyberSecurity/OutroScene";
 import { CyberBackground } from "./CyberSecurity/CyberBackground";
+import { BriefingV2, BRIEFING_V2_FRAMES } from "./v2/BriefingV2";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      {/* v2: yeni seslendirme, tehdit görünümü ve Türkiye vakaları */}
+      <Composition
+        id="Brifing2026-v2"
+        component={BriefingV2}
+        durationInFrames={BRIEFING_V2_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+
       {/* Ana Siber Olaylar 2026 Video Kompozisyonu */}
       <Composition
         id="SiberOlaylar2026"
